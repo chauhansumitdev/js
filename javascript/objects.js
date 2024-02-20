@@ -92,3 +92,42 @@ console.log(name, age); // Output: John 30
 // property exists?
 console.log("name" in person); // Output: true
 console.log(person.hasOwnProperty("job")); // Output: false
+
+
+// CONSTRUCTOR FUNCTIONS
+
+/**
+ * special fn to create similar multiple objects of same properties and methods.
+ * they serve as the blueprint for creating objects of with certain properties.
+ * 
+ */
+
+// how to define 
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+const person1 = new Person("John", 30);
+const person2 = new Person("Alice", 25);
+
+Person.prototype.greet = function() {
+    console.log("Hello, my name is " + this.name);
+};
+
+
+// prototype based inheritance
+
+function Animal(name) {
+    this.name = name;
+}
+
+Animal.prototype.sound = function() {
+    console.log(this.name + " makes a sound");
+};
+
+const dog = new Animal("Dog");
+const cat = new Animal("Cat");
+
+dog.sound(); // Output: Dog makes a sound
+cat.sound(); // Output: Cat makes a sound
