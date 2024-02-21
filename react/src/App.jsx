@@ -1,9 +1,10 @@
+
 function App() {
 
   return (
     <>
       <div>
-        <p>Reeeeeeeeeeeeeeeeeeaaaaaaaaaacccccccttttttttt</p>
+        <h1>Components spawn here</h1>
       </div>
     </>
   )
